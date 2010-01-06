@@ -16,6 +16,11 @@ ruby script/plugin install git://github.com/JackDanger/silk_icon_sprite.git
 
 Yes, right now.
 
+## Should I host the image on my CDN for the world to enjoy?
+
+Yes, please do that so the world can use this wonderful icon set even more easily.
+Let me know where you host it and I'd be happy to use your url as the official one.
+
 ### Copyright
 
 All the hard work was done by [Mark James](http://www.famfamfam.com/lab/icons/silk/) when

@@ -1,7 +1,4 @@
 
-module ActionView
-  module Helpers
-    autoload :SilkIconHelper, File.join(File.dirname(__FILE__), 'silk_icon_helper')
-    include SilkIconHelper
-  end
-end
+require File.join(File.dirname(__FILE__), 'silk_icon_helper')
+
+ActionView::Base.send(:include, SilkIconHelper)

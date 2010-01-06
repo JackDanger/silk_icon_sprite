@@ -4,19 +4,22 @@
 
 module SilkIconHelper
 
-  # Change these when you install the image files into your app
-  WHERE_I_PUT_SILK_ICON_FILE = "famfamfam_silk.png"
-  WHERE_I_PUT_BLANK_IMAGE = "blank.gif"
+  # Overwrite these if you install the image files into your app differently
+  attr_accessor :where_i_put_silk_icon_file
+  attr_accessor :where_i_put_blank_image
+  self.where_i_put_silk_icon_file = "famfamfam_silk.png"
+  self.where_i_put_blank_image    = "blank.gif"
 
   def silk_icon(icon_name, options = {})
-    image_tag WHERE_I_PUT_BLANK_IMAGE, options.merge(:style => offset_style(icon_name))
+    image_tag SilkIconHelper.where_i_put_blank_image,
+              options.merge(:style => offset_style(icon_name))
   end
 
   def offset_style(name)
     height_offset = ICON_NAMES_IN_ORDER.index(name) * 17
 
     style = []
-    style << "background-image: url(#{WHERE_I_PUT_SILK_ICON_FILE})"
+    style << "background-image: url(#{SilkIconHelper.where_i_put_silk_icon_file})"
     style << "background-repeat: no-repeat"
     style << "background-position: #{height_offset}px 0"
     style << "height: 16px;"

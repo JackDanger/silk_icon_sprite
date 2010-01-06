@@ -23,6 +23,7 @@ module SilkIconHelper
     style << "background-repeat: no-repeat"
     style << "background-position: #{height_offset}px 0"
     style << "height: 16px;"
+    style << "width: 16px;"
     style.join(";")
   end
 

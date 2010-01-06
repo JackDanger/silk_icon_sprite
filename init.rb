@@ -1,0 +1,1 @@
+require 'silk_icon_sprite'

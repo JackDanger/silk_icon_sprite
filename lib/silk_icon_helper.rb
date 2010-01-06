@@ -9,8 +9,8 @@ module SilkIconHelper
     attr_accessor :where_i_put_silk_icon_file
     attr_accessor :where_i_put_blank_image
   end
-  self.where_i_put_silk_icon_file = "famfamfam_silk.png"
-  self.where_i_put_blank_image    = "blank.gif"
+  self.where_i_put_silk_icon_file = "/images/famfamfam_silk.png"
+  self.where_i_put_blank_image    = "/images/blank.gif"
 
   def silk_icon(icon_name, options = {})
     image_tag SilkIconHelper.where_i_put_blank_image,

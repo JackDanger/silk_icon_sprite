@@ -18,12 +18,12 @@ module SilkIconHelper
   end
 
   def offset_style(name)
-    height_offset = ICON_NAMES_IN_ORDER.index(name.to_sym) * 17
+    height_offset = -(ICON_NAMES_IN_ORDER.index(name.to_sym) * 17)
 
     style = []
     style << "background-image: url(#{SilkIconHelper.where_i_put_silk_icon_file})"
     style << "background-repeat: no-repeat"
-    style << "background-position: #{height_offset}px 0"
+    style << "background-position: 0 #{height_offset}px"
     style << "height: 16px;"
     style << "width: 16px;"
     style.join(";")

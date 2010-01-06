@@ -1,7 +1,7 @@
 # Add this to your Rails/Rack/Sinatra app to use silk icons
 # For Rails place this file in app/helpers/
-module SilkHelper
-  extend self
+module SilkIconHelper
+
   # Change these when you install the image files into your app
   WHERE_I_PUT_SILK_ICON_FILE = "famfamfam_silk.png"
   WHERE_I_PUT_BLANK_IMAGE = "blank.gif"

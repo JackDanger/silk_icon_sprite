@@ -1,5 +1,7 @@
-# Add this to your Rails/Rack/Sinatra app to use silk icons
-# For Rails place this file in app/helpers/
+# Add this to your Rack/Sinatra app manually to use silk icons
+# You might want to add <tt>extend self</tt> inside the module
+# to use it programatically. e.g.: SilkIconHelper.silk_icon(...)
+
 module SilkIconHelper
 
   # Change these when you install the image files into your app

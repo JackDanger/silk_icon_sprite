@@ -5,8 +5,10 @@
 module SilkIconHelper
 
   # Overwrite these if you install the image files into your app differently
-  attr_accessor :where_i_put_silk_icon_file
-  attr_accessor :where_i_put_blank_image
+  class << self
+    attr_accessor :where_i_put_silk_icon_file
+    attr_accessor :where_i_put_blank_image
+  end
   self.where_i_put_silk_icon_file = "famfamfam_silk.png"
   self.where_i_put_blank_image    = "blank.gif"
 

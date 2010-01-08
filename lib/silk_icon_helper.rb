@@ -3,7 +3,8 @@
 # to use it programatically. e.g.: SilkIconHelper.silk_icon(...)
 
 module SilkIconHelper
-
+  class SilkIconMissing < ArgumentError
+  end
   # Overwrite these if you install the image files into your app differently
   class << self
     attr_accessor :where_i_put_silk_icon_file
@@ -18,7 +19,11 @@ module SilkIconHelper
   end
 
   def offset_style(name)
-    height_offset = -(ICON_NAMES_IN_ORDER.index(name.to_sym) * 17)
+    begin
+      height_offset = -(ICON_NAMES_IN_ORDER.index(name.to_sym) * 17)
+    rescue
+      raise SilkIconMissing, "Icon #{name} is not a part of the Silk icon set!"
+    end
 
     style = []
     style << "background-image: url(#{SilkIconHelper.where_i_put_silk_icon_file})"

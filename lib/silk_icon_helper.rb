@@ -29,6 +29,7 @@ module SilkIconHelper
     style << "background-image: url(#{SilkIconHelper.where_i_put_silk_icon_file})"
     style << "background-repeat: no-repeat"
     style << "background-position: 0 #{height_offset}px"
+    style << "vertical-align: text-bottom;"
     style << "height: 16px;"
     style << "width: 16px;"
     style.join(";")

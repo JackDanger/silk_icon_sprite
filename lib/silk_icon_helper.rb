@@ -14,6 +14,7 @@ module SilkIconHelper
   self.where_i_put_blank_image    = "/images/blank.gif"
 
   def silk_icon(icon_name, options = {})
+    options[:alt] ||= icon_name
     image_tag SilkIconHelper.where_i_put_blank_image,
               options.merge(:style => offset_style(icon_name))
   end

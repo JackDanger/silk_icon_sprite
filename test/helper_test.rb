@@ -21,7 +21,7 @@ class HelperTest < Test::Unit::TestCase
 
   def test_page_edit
     expected = <<-EOIMAGE
-<img alt="Blank" src="/images/blank.gif" style="background-image: url(/images/famfamfam_silk.png);background-repeat: no-repeat;background-position: 0 -10421px;vertical-align: text-bottom;;height: 16px;;width: 16px;" />
+<img alt="page_edit" src="/images/blank.gif" style="background-image: url(/images/famfamfam_silk.png);background-repeat: no-repeat;background-position: 0 -10421px;vertical-align: text-bottom;;height: 16px;;width: 16px;" />
 EOIMAGE
     assert_equal expected.chomp("\n"), @h.silk_icon(:page_edit)
   end

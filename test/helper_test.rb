@@ -1,5 +1,4 @@
 require 'test/unit'
-require 'rubygems'
 require 'active_support'
 require 'action_pack'
 require 'action_controller'

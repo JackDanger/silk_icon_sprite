@@ -16,7 +16,7 @@ module SilkIconHelper
   def silk_icon(icon_name, options = {})
     options[:alt] ||= icon_name
     image_tag SilkIconHelper.where_i_put_blank_image,
-              options.merge(:style => offset_style(icon_name))
+              options.merge(:style => offset_style(icon_name).to_s+options[:style].to_s)
   end
 
   def offset_style(name)
